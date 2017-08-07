@@ -5,7 +5,7 @@ const daysOfWeek = {monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday: 5,
 
 app.get('/api/days/:day', (request, response) => {
   const { day } = request.params
-  console.log(daysOfWeek[day])
+  response.status(200).send(daysOfWeek[day].toString())
 })
 
 app.listen(3000, () => {
