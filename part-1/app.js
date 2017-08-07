@@ -5,7 +5,11 @@ const daysOfWeek = {monday: 1, tuesday: 2, wednesday: 3, thursday: 4, friday: 5,
 
 app.get('/api/days/:day', (request, response) => {
   const { day } = request.params
-  response.status(200).send(daysOfWeek[day].toString())
+  if(daysOfWeek[day] > 0 && daysOfWeek[day] <= 7) {
+    response.status(200).send(daysOfWeek[day].toString())
+  } else {
+    response.status(400).send(day + ' is not a valid day!')
+  }
 })
 
 app.listen(3000, () => {
