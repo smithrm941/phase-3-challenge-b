@@ -6,8 +6,8 @@ CREATE DATABASE grocery_store;
 CREATE TABLE items (
   product_id SERIAL PRIMARY KEY,
   product_name VARCHAR(255) NOT NULL,
-  section VARCHAR(255) NOT NULL,
-  price NUMERIC NOT NULL
+  price NUMERIC NOT NULL,
+  section VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE shoppers (
