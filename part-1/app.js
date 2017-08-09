@@ -17,9 +17,9 @@ app.get('/api/days/:day', (request, response) => {
 
 app.post('/api/array/concat', (request, response) => {
   //tested in curl with
-  //curl -i -d '{"array1": [3, 4], "array2": [5, 6]}' localhost:3000/api/array/concat
+  //curl -i -d '{"array1": [3, 4], "array2": [5, 6]}' -H "Content-Type: application/json" localhost:3000/api/array/concat
   //and
-  //curl -i -d '{"array1": "not an array", "array2": [5, 6]}' localhost:3000/api/array/concat
+  //curl -i -d '{"array1": "not an array", "array2": [5, 6]}' -H "Content-Type: application/json" localhost:3000/api/array/concat
     if(Array.isArray(request.body.array1) && Array.isArray(request.body.array2)){
       const result = request.body.array1.concat(request.body.array2)
       console.log(result)
