@@ -1,6 +1,7 @@
 \c grocery_store
 
-COPY items (product_name, price, section) FROM '/Users/ramonesweasel/Desktop/LearnersGuild/phase-3-challenge-b/part-2/groceries.csv' DELIMITER ',' CSV HEADER;
+/*replace FULL/PATH/TO/groceries.csv with actual full path to groceries.csv*/
+COPY items (product_name, price, section) FROM 'FULL/PATH/TO/groceries.csv' DELIMITER ',' CSV HEADER;
 
 INSERT INTO shoppers(shopper_name) VALUES
   ('Rhonda Smith'),
