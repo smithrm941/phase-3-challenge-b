@@ -96,6 +96,27 @@ function updateTotalCost () {
 }
 
 //Section functionality
-const produce = document.getElementById("produce-sidebar-label");
-const deli = document.getElementById("deli-sidebar-label");
-const frozen = document.getElementById("frozen-sidebar-label");
+const produceLabel = document.getElementById("produce-sidebar-label");
+const deliLabel = document.getElementById("deli-sidebar-label");
+const frozenLabel = document.getElementById("frozen-sidebar-label");
+const produceSection = document.getElementById("produce-section");
+const deliSection = document.getElementById("deli-section");
+const frozenSection = document.getElementById("frozen-section");
+
+produceLabel.onclick = function() {
+  produceSection.style.background = '#eee';
+  deliSection.style.background = 'transparent';
+  frozenSection.style.background = 'transparent';
+}
+
+deliLabel.onclick = function() {
+  deliSection.style.background = '#eee'
+  produceSection.style.background = 'transparent';
+  frozenSection.style.background = 'transparent';
+}
+
+frozenLabel.onclick = function() {
+  frozenSection.style.background = '#eee';
+  produceSection.style.background = 'transparent';
+  deliSection.style.background = 'transparent'
+}
