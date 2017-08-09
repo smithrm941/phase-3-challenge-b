@@ -10,7 +10,7 @@ switch(process.argv[2]) {
     shopperOrders()
     break;
   case 'real-shoppers':
-    realShoppers()//probably will take argument
+    realShoppers()
     break;
   default:
     console.log('Please enter a command')
